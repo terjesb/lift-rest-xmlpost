@@ -1,0 +1,11 @@
+<configuration scan="false" debug="false">
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[%t] [%4p] [%d{ISO8601}] %c{1}: %m%n</pattern>
+    </encoder>
+  </appender>
+  <logger name="nevi" level="DEBUG"/>
+  <root level="DEBUG">
+    <appender-ref ref="stdout"/>
+  </root>
+</configuration>

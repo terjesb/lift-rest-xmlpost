@@ -1,0 +1,23 @@
+<configuration scan="false" debug="false">
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[%t] [%4p] [%d{ISO8601}] %c{1}: %m%n</pattern>
+    </encoder>
+  </appender>
+  /*
+  <appender name="R" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>/var/log/nevi/magentoprocessor.log</File>
+    <encoder>
+      <pattern>[%t] [%4p] [%d{ISO8601}] %c{1}: %m%n</pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>/var/log/nevi/magentoprocessor.log.slf4j.%d{yyyy-MM-dd-HH}</fileNamePattern>
+    </rollingPolicy>
+  </appender>
+  */
+  <logger name="nevi" level="INFO"/>
+  <root level="INFO">
+    <appender-ref ref="stdout"/>
+    <appender-ref ref="R"/>
+  </root>
+</configuration>

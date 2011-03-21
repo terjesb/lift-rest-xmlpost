@@ -1,0 +1,5 @@
+.DS_Store
+lib_managed
+lift_proto.db.h2.db
+project/boot
+target
